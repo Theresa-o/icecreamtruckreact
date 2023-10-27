@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 const Shop = () => {
-  // axios
+  // fetch data using axios
   const [foodItems, setFoodItems] = useState([]);
 
   useEffect(() => {
@@ -19,7 +18,7 @@ const Shop = () => {
 
   return (
     <div>
-      <div className="container mx-auto py-8 ml-8">
+      <div className="container mx-auto py-8 ml-7">
         <div className="flex justify-center content-center">
           <ul>
             {foodItems.map((foodItem) => (
