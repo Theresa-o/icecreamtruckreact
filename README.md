@@ -1,8 +1,33 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Ice Cream Truck Management System Frontend
 
-Currently, two official plugins are available:
+This is the README file for the Ice Cream Truck Management System. This shows the list of food items we currently have in our inventory.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Installation
+
+To set up the Ice Cream Truck Management System Frontend, follow these steps:
+
+- Clone the Repository: First, clone the repository to your local machine.
+
+```bash
+git clone https://github.com/Theresa-o/icecreamtruckreact.git
+```
+
+- Navigate to the project's root directory 
+
+```bash
+cd icecreamtruckreact
+```
+- Install project dependencies.:
+
+```bash
+npm install
+```
+
+
+- Run the Development Server: Start the Django development server:
+
+```bash
+npm run dev
+```
