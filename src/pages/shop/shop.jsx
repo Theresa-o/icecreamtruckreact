@@ -3,51 +3,32 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Shop = () => {
-  //   const [foodItems, setFoodItems] = useState([]);
-
-  //   useEffect(() => {
-  //     // Define the URL of your API
-  //     const apiUrl = "http://127.0.0.1:8000/api/FoodItem/";
-
-  //     // Fetch data from the API
-  //     fetch(apiUrl)
-  //       .then((response) => {
-  //         if (!response.ok) {
-  //           throw new Error("Network response was not ok");
-  //         }
-  //         return response.json();
-  //       })
-  //       .then((data) => {
-  //         console.log(data);
-  //         setFoodItems(data);
-  //       })
-  //       .catch((error) => {
-  //         console.error("There was a problem with the fetch operation:", error);
-  //       });
-  //   }, []);
-
   // axios
   const [foodItems, setFoodItems] = useState([]);
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/api/FoodItem/").then((response) => {
-      setFoodItems(response.data);
-    });
+    axios
+      .get("http://127.0.0.1:8000/fooditem/")
+      .then((response) => {
+        setFoodItems(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   }, []);
+
   return (
     <div>
       <div className="container mx-auto py-8">
         <div className="shopTitle">
-          <h1 className="text-3xl font-semibold text-gray-800 mb-4">
-            Our Products
-          </h1>
+          <h1 className="text-3xl font-bold underline">Our Products</h1>
         </div>
         <div className="iceCreamItems">
           <ul>
             {foodItems.map((foodItem) => (
               <li key={foodItem.id}>
                 <Link to={`/fooditem/${foodItem.id}`}>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                  <div className="grid grid-cols-3 gap-0">
                     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                       <img
                         src={foodItem.image}
@@ -64,10 +45,6 @@ const Shop = () => {
                       </div>
                     </div>
                   </div>
-
-                  {/* <img src={foodItem.image} alt={foodItem.name} />
-                  <strong>{foodItem.name}</strong>
-                  <p>Price: ${foodItem.price}</p> */}
                 </Link>
               </li>
             ))}
