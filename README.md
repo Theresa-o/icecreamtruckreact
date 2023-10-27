@@ -31,7 +31,3 @@ npm run dev
 ```
 
 Please visit https://github.com/Theresa-o/icecreamtruck to view the backend
-
-```bash
-npm run dev
-```
