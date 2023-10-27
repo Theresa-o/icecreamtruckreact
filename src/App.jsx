@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Hero from "./components/hero";
 import Shop from "./pages/shop/shop";
-import Order from "./pages/order/order";
-import Product from "./pages/product/product";
 
 function App() {
   return (
@@ -12,8 +10,6 @@ function App() {
           <Hero />
           <Routes>
             <Route exact path="/" element={<Shop />} />
-            <Route path="/fooditem/:id" element={<Product />} />
-            <Route path="/order" element={<Order />} />
           </Routes>
         </Router>
       </div>
