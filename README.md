@@ -24,9 +24,13 @@ cd icecreamtruckreact
 ```bash
 npm install
 ```
-
-
 - Run the Development Server: Start the Django development server:
+
+```bash
+npm run dev
+```
+
+Please visit https://github.com/Theresa-o/icecreamtruck to view the backend
 
 ```bash
 npm run dev
